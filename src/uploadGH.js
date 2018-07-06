@@ -1,20 +1,26 @@
 /*jshint esversion: 6 */
-var api = require('sketch');
+var sketch = require('sketch');
 var UI = require('sketch/ui');
 
 
 export default function(context) {
-  const originalElement = context.this;
-  const selectedLayers = context.selection;
-  const selectedCount = selectedLayers.length;
+  var document = sketch.getSelectedDocument();
+  var selected = document.selectedLayers;
+  var counted = selected.length;
 
-  UI.message("It's alive 🙌");
-  UI.alert('my title', 'Hello World!');
-  context.document.showMessage(`${originalElement} is the original element.`);
+  // var repoPath = UI.getStringFromUser("What repo is this for?", 'rackerlabs/design-system');
+  //
+  // UI.message(`${repoPath} was chosen.`);
 
-  // if (selectedCount === 0) {
-  //   context.document.showMessage('No layers are selected.');
-  // } else {
-  //   context.document.showMessage(`${selectedLayers} layers selected.`);
-  // }
+  if (selected.isEmpty) {
+    UI.message('Nothing selected.');
+  } else {
+    sketch.export(selected.layers, {
+      output: '~/Desktop/SketchOutputs',
+      formats: 'png, jpg, svg',
+      scales: '1, 2, 3',
+    });
+
+    UI.message(`Export completed. Selection was ${counted}.`);
+  }
 }

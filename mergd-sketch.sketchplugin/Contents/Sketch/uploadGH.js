@@ -101,21 +101,27 @@ var exports =
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /*jshint esversion: 6 */
-var api = __webpack_require__(/*! sketch */ "sketch");
+var sketch = __webpack_require__(/*! sketch */ "sketch");
 
 var UI = __webpack_require__(/*! sketch/ui */ "sketch/ui");
 
 /* harmony default export */ __webpack_exports__["default"] = (function (context) {
-  var originalElement = context.this;
-  var selectedLayers = context.selection;
-  var selectedCount = selectedLayers.length;
-  UI.message("It's alive 🙌");
-  UI.alert('my title', 'Hello World!');
-  context.document.showMessage("".concat(originalElement, " is the original element.")); // if (selectedCount === 0) {
-  //   context.document.showMessage('No layers are selected.');
-  // } else {
-  //   context.document.showMessage(`${selectedLayers} layers selected.`);
-  // }
+  var document = sketch.getSelectedDocument();
+  var selected = document.selectedLayers;
+  var counted = selected.length; // var repoPath = UI.getStringFromUser("What repo is this for?", 'rackerlabs/design-system');
+  //
+  // UI.message(`${repoPath} was chosen.`);
+
+  if (selected.isEmpty) {
+    UI.message('Nothing selected.');
+  } else {
+    sketch.export(selected.layers, {
+      output: '~/Desktop/SketchOutputs',
+      formats: 'png, jpg, svg',
+      scales: '1, 2, 3'
+    });
+    UI.message("Export completed. Selection was ".concat(counted, "."));
+  }
 });
 
 /***/ }),
