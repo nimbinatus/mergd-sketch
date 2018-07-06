@@ -9,7 +9,7 @@
   "homepage": "http://helix.rax.io",
   "version": "0.0.1",
   "identifier": "com.rackspace.sketch.helix-asset-link-plugins",
-  "icon": "icon.png",
+  "icon": "mergd.png",
   "disableCocoaScriptPreprocessor": true,
   "compatibleVersion": "50.2",
   "commands": [
@@ -22,11 +22,11 @@
       "name": "Try uploading",
       "identifier": "tester",
       "script": "uploadGH.js",
-      "icon": "icon.png"
+      "icon": "mergd.png"
     }
   ],
   "menu": {
-    "title": "🔹 Asset Link",
+    "title": "🔹 Mergd Asset Link",
     "items": [
       "my-command-identifier",
       "tester"

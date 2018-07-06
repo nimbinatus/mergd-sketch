@@ -102,7 +102,16 @@ var exports =
 __webpack_require__.r(__webpack_exports__);
 /*jshint esversion: 6 */
 /* harmony default export */ __webpack_exports__["default"] = (function (context) {
-  context.document.showMessage("It's alive 2 🙌");
+  var originalElement = context.this;
+  var selectedLayers = context.selection;
+  var selectedCount = selectedLayers.length;
+  context.document.showMessage("".concat(originalElement, " is the original element."));
+
+  if (selectedCount === 0) {
+    context.document.showMessage('No layers are selected.');
+  } else {
+    context.document.showMessage("".concat(selectedLayers, " layers selected."));
+  }
 });
 
 /***/ })
