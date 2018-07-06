@@ -1,100 +1,21 @@
-# asset-link
+# Mergd Sketch Plugin
 
-_This plugin was created using `skpm`. For a detailed explanation on how things work, checkout the [skpm Readme](https://github.com/skpm/skpm/blob/master/README.md)._
+This is in alpha development. Please do not use on production systems.
 
-## Usage
+Currently, this plugin, when called on a selected layer or group in Sketch,
+outputs the image as SVG, JPG, and PNG at 1x, 2x, and 3x scale to a directory
+on the user's desktop.
 
-Install the dependencies
-
-```bash
-npm install
-```
-
-Once the installation is done, you can run some commands inside the project folder:
-
-```bash
-npm run build
-```
-
-To watch for changes:
-
-```bash
-npm run watch
-```
-
-Additionally, if you wish to run the plugin every time it is built:
-
-```bash
-npm run start
-```
-
-## Custom Configuration
-
-### Babel
-
-To customize Babel, you have two options:
-
-* You may create a [`.babelrc`](https://babeljs.io/docs/usage/babelrc) file in your project's root directory. Any settings you define here will overwrite matching config-keys within skpm preset. For example, if you pass a "presets" object, it will replace & reset all Babel presets that skpm defaults to.
-
-* If you'd like to modify or add to the existing Babel config, you must use a `webpack.skpm.config.js` file. Visit the [Webpack](#webpack) section for more info.
-
-### Webpack
-
-To customize webpack create `webpack.skpm.config.js` file which exports function that will change webpack's config.
-
-```js
-/**
- * Function that mutates original webpack config.
- * Supports asynchronous changes when promise is returned.
- *
- * @param {object} config - original webpack config.
- * @param {boolean} isPluginCommand - whether the config is for a plugin command or a resource
- **/
-module.exports = function(config, isPluginCommand) {
-  /** you can change config here **/
-}
-```
-
-## Debugging
-
-To view the output of your `console.log`, you have a few different options:
-
-* Use the [`sketch-dev-tools`](https://github.com/skpm/sketch-dev-tools)
-* Open `Console.app` and look for the sketch logs
-* Look at the `~/Library/Logs/com.bohemiancoding.sketch3/Plugin Output.log` file
-
-Skpm provides a convenient way to do the latter:
-
-```bash
-skpm log
-```
-
-The `-f` option causes `skpm log` to not stop when the end of logs is reached, but rather to wait for additional data to be appended to the input
-
-## Publishing your plugin
-
-```bash
-skpm publish <bump>
-```
-
-(where `bump` can be `patch`, `minor` or `major`)
-
-`skpm publish` will create a new release on your GitHub repository and create an appcast file in order for Sketch users to be notified of the update.
-
-You will need to specify a `repository` in the `package.json`:
-
-```diff
-...
-+ "repository" : {
-+   "type": "git",
-+   "url": "git+https://github.com/ORG/NAME.git"
-+  }
-...
-```
+![example](assets/attempt1.gif)
 
 ## Icon Creation and Related Licenses
 
-Original Git icon was modified from https://git-scm.com/downloads/logos. Original license on logo was as follows:
->Git Logo by Jason Long is licensed under the Creative Commons Attribution 3.0 Unported License.
-
->This license lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of the CC licenses offered. Recommended for maximum dissemination and use of licensed materials.
+Original Git icon was modified from
+[the original git logo](https://git-scm.com/downloads/logos). Original license
+on the logo was as follows:
+>Git Logo by Jason Long is licensed under the Creative Commons Attribution 3.0
+>Unported License.
+>This license lets others distribute, remix, tweak, and build upon your work,
+>even commercially, as long as they credit you for the original creation. This
+>is the most accommodating of the CC licenses offered. Recommended for maximum
+>dissemination and use of licensed materials.
