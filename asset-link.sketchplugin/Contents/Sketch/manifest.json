@@ -1,0 +1,35 @@
+{
+  "name": "Helix Asset Link",
+  "description": "Automation for the Helix project that takes in Sketch files and commits the assets from those files to the GitHub repo",
+  "author": {
+    "name": "Laura Santamaria",
+    "email": "laura.santamaria@rackspace.com",
+    "url": "http://helix.rax.io"
+  },
+  "homepage": "http://helix.rax.io",
+  "version": "0.0.1",
+  "identifier": "com.rackspace.sketch.helix-asset-link-plugins",
+  "icon": "icon.png",
+  "disableCocoaScriptPreprocessor": true,
+  "compatibleVersion": "50.2",
+  "commands": [
+    {
+      "name": "Test me",
+      "identifier": "my-command-identifier",
+      "script": "my-command.js"
+    },
+    {
+      "name": "Try uploading",
+      "identifier": "tester",
+      "script": "uploadGH.js",
+      "icon": "icon.png"
+    }
+  ],
+  "menu": {
+    "title": "🔹 Asset Link",
+    "items": [
+      "my-command-identifier",
+      "tester"
+    ]
+  }
+}
