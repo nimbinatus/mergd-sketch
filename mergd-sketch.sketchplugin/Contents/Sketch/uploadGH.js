@@ -101,18 +101,44 @@ var exports =
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /*jshint esversion: 6 */
+var api = __webpack_require__(/*! sketch */ "sketch");
+
+var UI = __webpack_require__(/*! sketch/ui */ "sketch/ui");
+
 /* harmony default export */ __webpack_exports__["default"] = (function (context) {
   var originalElement = context.this;
   var selectedLayers = context.selection;
   var selectedCount = selectedLayers.length;
-  context.document.showMessage("".concat(originalElement, " is the original element."));
-
-  if (selectedCount === 0) {
-    context.document.showMessage('No layers are selected.');
-  } else {
-    context.document.showMessage("".concat(selectedLayers, " layers selected."));
-  }
+  UI.message("It's alive 🙌");
+  UI.alert('my title', 'Hello World!');
+  context.document.showMessage("".concat(originalElement, " is the original element.")); // if (selectedCount === 0) {
+  //   context.document.showMessage('No layers are selected.');
+  // } else {
+  //   context.document.showMessage(`${selectedLayers} layers selected.`);
+  // }
 });
+
+/***/ }),
+
+/***/ "sketch":
+/*!*************************!*\
+  !*** external "sketch" ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("sketch");
+
+/***/ }),
+
+/***/ "sketch/ui":
+/*!****************************!*\
+  !*** external "sketch/ui" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("sketch/ui");
 
 /***/ })
 

@@ -8,7 +8,7 @@
   },
   "homepage": "http://helix.rax.io",
   "version": "0.0.1",
-  "identifier": "com.rackspace.sketch.helix-asset-link-plugins",
+  "identifier": "com.rackspace.sketch.mergd-plugins",
   "appcast": false,
   "icon": "mergd.png",
   "disableCocoaScriptPreprocessor": true,
