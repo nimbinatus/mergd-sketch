@@ -91,3 +91,10 @@ You will need to specify a `repository` in the `package.json`:
 +  }
 ...
 ```
+
+## Icon Creation and Related Licenses
+
+Original Git icon was modified from https://git-scm.com/downloads/logos. Original license on logo was as follows:
+>Git Logo by Jason Long is licensed under the Creative Commons Attribution 3.0 Unported License.
+
+>This license lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of the CC licenses offered. Recommended for maximum dissemination and use of licensed materials.
