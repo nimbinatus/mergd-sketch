@@ -4,7 +4,7 @@ This is in alpha development. Please do not use on production systems.
 
 Currently, this plugin, when called on a selected layer or group in Sketch,
 outputs the image as SVG, JPG, and PNG at 1x, 2x, and 3x scale to a directory
-on the user's desktop.
+on the user's desktop. stuff
 
 ![example](assets/attempt1.gif)
 
